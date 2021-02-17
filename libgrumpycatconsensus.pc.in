@@ -4,8 +4,8 @@ libdir=@libdir@
 includedir=@includedir@
 
 Name: @PACKAGE_NAME@ consensus library
-Description: Library for the DigiByte consensus protocol.
+Description: Library for the GrumpyCat consensus protocol.
 Version: @PACKAGE_VERSION@
-Libs: -L${libdir} -ldigibyteconsensus
+Libs: -L${libdir} -lgrumpycatconsensus
 Cflags: -I${includedir}
 Requires.private: libcrypto

@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-# Copyright (c) 2014-2015 The DigiByte Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 export LC_ALL=C
-if ! [[ "$2" =~ ^(git@)?(www.)?github.com(:|/)digibyte/digibyte(.git)?$ ]]; then
+if ! [[ "$2" =~ ^(git@)?(www.)?github.com(:|/)grumpycat/grumpycat(.git)?$ ]]; then
     exit 0
 fi
 

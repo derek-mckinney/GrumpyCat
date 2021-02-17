@@ -13,7 +13,7 @@ Construct a linear, no-fork, best version of the blockchain.
 
 ### [Qos](/contrib/qos) ###
 
-A Linux bash script that will set up traffic control (tc) to limit the outgoing bandwidth for connections to the DigiByte network. This means one can have an always-on digibyted instance running, and another local digibyted/digibyte-qt instance which connects to this node and receives blocks from it.
+A Linux bash script that will set up traffic control (tc) to limit the outgoing bandwidth for connections to the GrumpyCat network. This means one can have an always-on grumpycatd instance running, and another local grumpycatd/grumpycat-qt instance which connects to this node and receives blocks from it.
 
 ### [Seeds](/contrib/seeds) ###
 Utility to generate the pnSeed[] array that is compiled into the client.
@@ -24,13 +24,13 @@ Build Tools and Keys
 ### Packaging ###
 The [Debian](/contrib/debian) subfolder contains the copyright file.
 
-All other packaging related files can be found in the [digibyte-core/packaging](https://github.com/digibyte-core/packaging) repository.
+All other packaging related files can be found in the [grumpycat-core/packaging](https://github.com/grumpycat-core/packaging) repository.
 
 ### [Gitian-descriptors](/contrib/gitian-descriptors) ###
-Files used during the gitian build process. For more information about gitian, see the [the DigiByte Core documentation repository](https://github.com/digibyte-core/docs).
+Files used during the gitian build process. For more information about gitian, see the [the GrumpyCat Core documentation repository](https://github.com/grumpycat-core/docs).
 
 ### [Gitian-keys](/contrib/gitian-keys)
-PGP keys used for signing DigiByte Core [Gitian release](/doc/release-process.md) results.
+PGP keys used for signing GrumpyCat Core [Gitian release](/doc/release-process.md) results.
 
 ### [MacDeploy](/contrib/macdeploy) ###
 Scripts and notes for Mac builds. 
@@ -45,7 +45,7 @@ Test and Verify Tools
 ---------------------
 
 ### [TestGen](/contrib/testgen) ###
-Utilities to generate test vectors for the data-driven DigiByte tests.
+Utilities to generate test vectors for the data-driven GrumpyCat tests.
 
 ### [Verify Binaries](/contrib/verifybinaries) ###
-This script attempts to download and verify the signature file SHA256SUMS.asc from digibyte.org.
+This script attempts to download and verify the signature file SHA256SUMS.asc from grumpycat.org.

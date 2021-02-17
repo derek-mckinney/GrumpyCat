@@ -1,15 +1,14 @@
-# bash programmable completion for digibyte-tx(1)
-# Copyright (c) 2016 The DigiByte Core developers
+# bash programmable completion for grumpycat-tx(1)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-_digibyte_tx() {
+_grumpycat_tx() {
     local cur prev words=() cword
-    local digibyte_tx
+    local grumpycat_tx
 
-    # save and use original argument to invoke digibyte-tx for -help
+    # save and use original argument to invoke grumpycat-tx for -help
     # it might not be in $PATH
-    digibyte_tx="$1"
+    grumpycat_tx="$1"
 
     COMPREPLY=()
     _get_comp_words_by_ref -n =: cur prev words cword
@@ -27,15 +26,15 @@ _digibyte_tx() {
 
     if [[ "$cword" == 1 || ( "$prev" != "-create" && "$prev" == -* ) ]]; then
         # only options (or an uncompletable hex-string) allowed
-        # parse digibyte-tx -help for options
+        # parse grumpycat-tx -help for options
         local helpopts
-        helpopts=$($digibyte_tx -help | sed -e '/^  -/ p' -e d )
+        helpopts=$($grumpycat_tx -help | sed -e '/^  -/ p' -e d )
         COMPREPLY=( $( compgen -W "$helpopts" -- "$cur" ) )
     else
         # only commands are allowed
         # parse -help for commands
         local helpcmds
-        helpcmds=$($digibyte_tx -help | sed -e '1,/Commands:/d' -e 's/=.*/=/' -e '/^  [a-z]/ p' -e d )
+        helpcmds=$($grumpycat_tx -help | sed -e '1,/Commands:/d' -e 's/=.*/=/' -e '/^  [a-z]/ p' -e d )
         COMPREPLY=( $( compgen -W "$helpcmds" -- "$cur" ) )
     fi
 
@@ -46,7 +45,7 @@ _digibyte_tx() {
 
     return 0
 } &&
-complete -F _digibyte_tx digibyte-tx
+complete -F _grumpycat_tx grumpycat-tx
 
 # Local variables:
 # mode: shell-script

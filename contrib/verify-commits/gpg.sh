@@ -1,5 +1,4 @@
 #!/bin/sh
-# Copyright (c) 2014-2016 The DigiByte Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -43,12 +42,12 @@ for LINE in $(echo "$GPG_RES"); do
 		done < ./contrib/verify-commits/trusted-keys
 		;;
 	"[GNUPG:] REVKEYSIG "*)
-		[ "$DIGIBYTE_VERIFY_COMMITS_ALLOW_REVSIG" != 1 ] && exit 1
+		[ "$GRUMPYCAT_VERIFY_COMMITS_ALLOW_REVSIG" != 1 ] && exit 1
 		REVSIG=true
 		GOODREVSIG="[GNUPG:] GOODSIG ${LINE#* * *}"
 		;;
 	"[GNUPG:] EXPKEYSIG "*)
-		[ "$DIGIBYTE_VERIFY_COMMITS_ALLOW_REVSIG" != 1 ] && exit 1
+		[ "$GRUMPYCAT_VERIFY_COMMITS_ALLOW_REVSIG" != 1 ] && exit 1
 		REVSIG=true
 		GOODREVSIG="[GNUPG:] GOODSIG ${LINE#* * *}"
 		;;

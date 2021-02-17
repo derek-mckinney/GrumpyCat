@@ -1,5 +1,5 @@
-Building DigiByte
+Building GrumpyCat
 ================
 
 See doc/build-*.md for instructions on building the various
-elements of the DigiByte Core reference implementation of DigiByte.
+elements of the GrumpyCat Core reference implementation of GrumpyCat.
